@@ -1,0 +1,76 @@
+*{
+    padding: 1px;
+    margin: 1px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+h2{
+    text-align: center;
+    position: relative;
+    width: 80%;
+    margin: 50px auto;
+}
+h2::before{
+    width: 100%;
+    display: block;
+    height: 2px;
+    background-color: black;
+    top: 50%;
+}
+h2 span{
+    background-color: none;
+    padding: 0 15px;
+    transition: .5s;
+}
+h2 span:hover{
+    letter-spacing: 10px;
+    background-color: black;
+    color: white;
+    transition: 2s;
+}
+body{
+    background-color: rgb(200, 200, 200)
+}
+/* LLAMADA A LAS CLASES */
+.img-gallery{
+    width: 80%;
+    margin: 50px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    /*EL ATRIBUTO "GAP" PERMITE QUE LAS IMAGENES SE 
+    APILEN UNO DEBAJO DEL OTRO*/
+    gap: 30px;
+}
+.img-gallery img{
+    width: 100%;
+    cursor: pointer;
+    transition: 2s;
+}
+.img-gallery img:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.ful-img{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+}
+.ful-img span{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-family: sans-serif;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+.ful-img img{
+    width: 90%;
+    max-width: 600px;
+}
